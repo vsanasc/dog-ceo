@@ -41,6 +41,12 @@ class BreedListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let dest = BreedImagesViewController()
+        dest.breedSelected = items[indexPath.row]
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(dest, animated: true)
+        }
+
     }
 
     func showLoading() {

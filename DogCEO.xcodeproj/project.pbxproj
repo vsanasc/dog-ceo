@@ -17,6 +17,8 @@
 		75D804CE2618BB1F00DFC03F /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D804CD2618BB1F00DFC03F /* ImageResponse.swift */; };
 		75D804D12618BB6C00DFC03F /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D804D02618BB6C00DFC03F /* NetworkAPI.swift */; };
 		75D804D62618C61200DFC03F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D804D52618C61200DFC03F /* UIView+Constraints.swift */; };
+		75D804DB2618D02900DFC03F /* BreedImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D804DA2618D02900DFC03F /* BreedImagesViewController.swift */; };
+		75D804DE2618D5EC00DFC03F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D804DD2618D5EC00DFC03F /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		75D804CD2618BB1F00DFC03F /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 		75D804D02618BB6C00DFC03F /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		75D804D52618C61200DFC03F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		75D804DA2618D02900DFC03F /* BreedImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesViewController.swift; sourceTree = "<group>"; };
+		75D804DD2618D5EC00DFC03F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				75D804C02618B67D00DFC03F /* BreedListViewController.swift */,
 				75D804C32618B6E900DFC03F /* NavigationViewController.swift */,
 				75D804D02618BB6C00DFC03F /* NetworkAPI.swift */,
+				75D804DA2618D02900DFC03F /* BreedImagesViewController.swift */,
+				75D804DD2618D5EC00DFC03F /* ImageCell.swift */,
 			);
 			path = DogCEO;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				75D804C92618B98500DFC03F /* BreedResponse.swift in Sources */,
+				75D804DB2618D02900DFC03F /* BreedImagesViewController.swift in Sources */,
+				75D804DE2618D5EC00DFC03F /* ImageCell.swift in Sources */,
 				75D804C42618B6E900DFC03F /* NavigationViewController.swift in Sources */,
 				751C94CE2618D9DF006970A7 /* UIImageView+Cache.swift in Sources */,
 				75D804D12618BB6C00DFC03F /* NetworkAPI.swift in Sources */,
