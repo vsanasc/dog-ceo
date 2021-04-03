@@ -9,17 +9,21 @@ import UIKit
 
 extension UIView {
 
-    func fillParent(margin: CGFloat = 0) {
+    func fillParentMargin(top: CGFloat, trailing: CGFloat, leading: CGFloat, bottom: CGFloat) {
         guard let parent = superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            topAnchor.constraint(equalTo: parent.topAnchor, constant: margin),
-            bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: margin),
-            trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: margin),
-            leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: margin)
+            topAnchor.constraint(equalTo: parent.topAnchor, constant: top),
+            bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -bottom),
+            trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -trailing),
+            leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: leading)
         ]
         NSLayoutConstraint.activate(constraints)
+    }
+
+    func fillParent(margin: CGFloat = 0) {
+        fillParentMargin(top: margin, trailing: margin, leading: margin, bottom: margin)
     }
 
     func centerParent() {
