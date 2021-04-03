@@ -53,6 +53,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		751C94E426190CF6006970A7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75D804C02618B67D00DFC03F /* BreedListViewController.swift */,
+				751C94D72618FED4006970A7 /* ImagesPreviewViewController.swift */,
+				75D804DA2618D02900DFC03F /* BreedImagesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		751C94E526190DBC006970A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				751C94E026190162006970A7 /* ImagePreviewCell.swift */,
+				75D804DD2618D5EC00DFC03F /* ImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		751C94E626190DCC006970A7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				75D804D02618BB6C00DFC03F /* NetworkAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		751C94E726190E17006970A7 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				75D804C32618B6E900DFC03F /* NavigationViewController.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		75D804982618B21B00DFC03F = {
 			isa = PBXGroup;
 			children = (
@@ -72,19 +107,16 @@
 		75D804A32618B21B00DFC03F /* DogCEO */ = {
 			isa = PBXGroup;
 			children = (
-				75D804D42618C60200DFC03F /* Extensions */,
-				75D804C72618B7F300DFC03F /* Models */,
+				75D804B22618B21C00DFC03F /* Info.plist */,
 				75D804A42618B21B00DFC03F /* AppDelegate.swift */,
 				75D804AD2618B21C00DFC03F /* Assets.xcassets */,
+				751C94E726190E17006970A7 /* Commons */,
+				751C94E426190CF6006970A7 /* Controllers */,
+				75D804D42618C60200DFC03F /* Extensions */,
 				75D804AF2618B21C00DFC03F /* LaunchScreen.storyboard */,
-				75D804B22618B21C00DFC03F /* Info.plist */,
-				75D804C02618B67D00DFC03F /* BreedListViewController.swift */,
-				75D804C32618B6E900DFC03F /* NavigationViewController.swift */,
-				75D804D02618BB6C00DFC03F /* NetworkAPI.swift */,
-				751C94D72618FED4006970A7 /* ImagesPreviewViewController.swift */,
-				75D804DA2618D02900DFC03F /* BreedImagesViewController.swift */,
-				751C94E026190162006970A7 /* ImagePreviewCell.swift */,
-				75D804DD2618D5EC00DFC03F /* ImageCell.swift */,
+				75D804C72618B7F300DFC03F /* Models */,
+				751C94E626190DCC006970A7 /* Network */,
+				751C94E526190DBC006970A7 /* Views */,
 			);
 			path = DogCEO;
 			sourceTree = "<group>";
