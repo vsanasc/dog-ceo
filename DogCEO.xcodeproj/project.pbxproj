@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751C94CE2618D9DF006970A7 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C94CD2618D9DF006970A7 /* UIImageView+Cache.swift */; };
 		75D804A52618B21B00DFC03F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D804A42618B21B00DFC03F /* AppDelegate.swift */; };
 		75D804AE2618B21C00DFC03F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D804AD2618B21C00DFC03F /* Assets.xcassets */; };
 		75D804B12618B21C00DFC03F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D804AF2618B21C00DFC03F /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751C94CD2618D9DF006970A7 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
 		75D804A12618B21B00DFC03F /* Dog CEO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog CEO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D804A42618B21B00DFC03F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75D804AD2618B21C00DFC03F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				75D804D52618C61200DFC03F /* UIView+Constraints.swift */,
+				751C94CD2618D9DF006970A7 /* UIImageView+Cache.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				75D804C92618B98500DFC03F /* BreedResponse.swift in Sources */,
 				75D804C42618B6E900DFC03F /* NavigationViewController.swift in Sources */,
+				751C94CE2618D9DF006970A7 /* UIImageView+Cache.swift in Sources */,
 				75D804D12618BB6C00DFC03F /* NetworkAPI.swift in Sources */,
 				75D804D62618C61200DFC03F /* UIView+Constraints.swift in Sources */,
 				75D804CE2618BB1F00DFC03F /* ImageResponse.swift in Sources */,
