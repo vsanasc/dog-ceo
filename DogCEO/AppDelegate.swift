@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
 
-        let nav = NavigationViewController(rootViewController: MainViewController())
+        let nav = NavigationViewController(rootViewController: BreedListViewController())
 
         window = .init()
         window?.makeKeyAndVisible()

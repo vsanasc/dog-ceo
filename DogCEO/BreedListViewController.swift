@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  BreedListViewController.swift
 //  Dog CEO
 //
 //  Created by Vitor on 03-04-21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UITableViewController {
+class BreedListViewController: UITableViewController {
 
     lazy var loadingView: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
