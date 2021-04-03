@@ -15,9 +15,9 @@ class NetworkAPI {
         onSuccess: @escaping ((_ response: BreedResponse) -> Void),
         onError: @escaping ((_ error: Error) -> Void)
     ) {
-
+        let path: NetworkAPIPaths = .list
         urlSession.dataTask(
-            with: .init(url: URL(string: "https://dog.ceo/api/breeds/list")!),
+            with: .init(url: path.getURL()),
             completionHandler: { data, response, error in
                 if let error = error {
                     onError(error)
@@ -48,9 +48,9 @@ class NetworkAPI {
         onSuccess: @escaping ((_ response: ImageResponse) -> Void),
         onError: @escaping ((_ error: Error) -> Void)
     ) {
-
+        let path: NetworkAPIPaths = .images(slug: breed)
         urlSession.dataTask(
-            with: .init(url: URL(string: "https://dog.ceo/api/breed/\(breed)/images")!),
+            with: .init(url: path.getURL()),
             completionHandler: { data, response, error in
                 if let error = error {
                     onError(error)
