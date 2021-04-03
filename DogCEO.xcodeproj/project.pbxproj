@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		751C94CE2618D9DF006970A7 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C94CD2618D9DF006970A7 /* UIImageView+Cache.swift */; };
+		751C94D82618FED4006970A7 /* ImagesPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C94D72618FED4006970A7 /* ImagesPreviewViewController.swift */; };
+		751C94E126190162006970A7 /* ImagePreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C94E026190162006970A7 /* ImagePreviewCell.swift */; };
 		75D804A52618B21B00DFC03F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D804A42618B21B00DFC03F /* AppDelegate.swift */; };
 		75D804AE2618B21C00DFC03F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D804AD2618B21C00DFC03F /* Assets.xcassets */; };
 		75D804B12618B21C00DFC03F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D804AF2618B21C00DFC03F /* LaunchScreen.storyboard */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		751C94CD2618D9DF006970A7 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
+		751C94D72618FED4006970A7 /* ImagesPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesPreviewViewController.swift; sourceTree = "<group>"; };
+		751C94E026190162006970A7 /* ImagePreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewCell.swift; sourceTree = "<group>"; };
 		75D804A12618B21B00DFC03F /* Dog CEO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog CEO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D804A42618B21B00DFC03F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75D804AD2618B21C00DFC03F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,7 +81,9 @@
 				75D804C02618B67D00DFC03F /* BreedListViewController.swift */,
 				75D804C32618B6E900DFC03F /* NavigationViewController.swift */,
 				75D804D02618BB6C00DFC03F /* NetworkAPI.swift */,
+				751C94D72618FED4006970A7 /* ImagesPreviewViewController.swift */,
 				75D804DA2618D02900DFC03F /* BreedImagesViewController.swift */,
+				751C94E026190162006970A7 /* ImagePreviewCell.swift */,
 				75D804DD2618D5EC00DFC03F /* ImageCell.swift */,
 			);
 			path = DogCEO;
@@ -170,11 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751C94D82618FED4006970A7 /* ImagesPreviewViewController.swift in Sources */,
 				75D804C92618B98500DFC03F /* BreedResponse.swift in Sources */,
 				75D804DB2618D02900DFC03F /* BreedImagesViewController.swift in Sources */,
 				75D804DE2618D5EC00DFC03F /* ImageCell.swift in Sources */,
 				75D804C42618B6E900DFC03F /* NavigationViewController.swift in Sources */,
 				751C94CE2618D9DF006970A7 /* UIImageView+Cache.swift in Sources */,
+				751C94E126190162006970A7 /* ImagePreviewCell.swift in Sources */,
 				75D804D12618BB6C00DFC03F /* NetworkAPI.swift in Sources */,
 				75D804D62618C61200DFC03F /* UIView+Constraints.swift in Sources */,
 				75D804CE2618BB1F00DFC03F /* ImageResponse.swift in Sources */,

@@ -52,6 +52,14 @@ class BreedImagesViewController: UIViewController, UICollectionViewDelegate, UIC
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+
+        let dest = ImagesPreviewViewController(images: images, selected: indexPath.row)
+        navigationController?.pushViewController(dest, animated: true)
+
+    }
+
     func showLoading() {
         view.addSubview(loadingView)
         loadingView.centerParent()
