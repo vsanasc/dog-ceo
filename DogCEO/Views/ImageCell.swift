@@ -12,7 +12,6 @@ class ImageCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
-        view.backgroundColor = .red
         view.clipsToBounds = true
         return view
     }()
