@@ -12,7 +12,7 @@ class BaseNetworkViewController: UIViewController {
     private let loadingView = LoadingView(frame: .zero)
     let network = NetworkAPI()
     var items: [String] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -56,7 +56,7 @@ class BaseNetworkViewController: UIViewController {
             UIAlertAction(
                 title: "Retry",
                 style: .default,
-                handler: { action in
+                handler: { _ in
                     self.loadData()
                 }
             )

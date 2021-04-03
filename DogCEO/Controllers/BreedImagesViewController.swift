@@ -52,7 +52,7 @@ UICollectionViewDelegateFlowLayout {
                     }
                 }
             },
-            onError: { error in
+            onError: { _ in
                 DispatchQueue.main.async {
                     self.showErrorMessage()
                 }
@@ -100,6 +100,5 @@ UICollectionViewDelegateFlowLayout {
 
         return .init(section: section)
     }
-    
 
 }

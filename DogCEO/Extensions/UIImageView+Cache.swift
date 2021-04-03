@@ -27,7 +27,7 @@ extension UIImageView {
                 }
                 URLSession.shared.dataTask(
                     with: request,
-                    completionHandler: { data, response, error in
+                    completionHandler: { data, response, _ in
                         if let data = data,
                            let response = response as? HTTPURLResponse,
                            response.statusCode == 200,

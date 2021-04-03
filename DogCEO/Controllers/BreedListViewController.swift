@@ -34,7 +34,7 @@ class BreedListViewController: BaseNetworkViewController, UITableViewDelegate, U
                     }
                 }
             },
-            onError: { error in
+            onError: { _ in
                 DispatchQueue.main.async {
                     self.showErrorMessage()
                 }
