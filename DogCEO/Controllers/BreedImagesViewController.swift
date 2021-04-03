@@ -12,7 +12,7 @@ UICollectionViewDelegate,
 UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout {
 
-    lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: createViewLayout())
         view.delegate = self
         view.dataSource = self
@@ -20,7 +20,12 @@ UICollectionViewDelegateFlowLayout {
         view.backgroundColor = .white
         return view
     }()
-    var breedSelected = ""
+    private var breedSelected = ""
+
+    convenience init(breedSelected: String) {
+        self.init()
+        self.breedSelected = breedSelected
+    }
 
     override func setupUI() {
         super.setupUI()

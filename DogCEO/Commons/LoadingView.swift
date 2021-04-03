@@ -9,14 +9,14 @@ import UIKit
 
 class LoadingView: UIView {
 
-    lazy var label: UILabel = {
+    private lazy var label: UILabel = {
         let view = UILabel()
         view.text = "cargando..."
         view.font = .systemFont(ofSize: 16.0)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    lazy var activityView: UIActivityIndicatorView = {
+    private lazy var activityView: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
         view.startAnimating()
         view.style = .large

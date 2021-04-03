@@ -12,7 +12,7 @@ UICollectionViewDelegate,
 UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout {
 
-    lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 0
@@ -29,8 +29,8 @@ UICollectionViewDelegateFlowLayout {
         view.clipsToBounds = true
         return view
     }()
-    var images: [String] = []
-    var selected: Int = 0
+    private var images: [String] = []
+    private var selected: Int = 0
 
     convenience init(images: [String], selected: Int) {
         self.init()
@@ -88,7 +88,7 @@ UICollectionViewDelegateFlowLayout {
         }
     }
 
-    func setTitle(position: Int) {
+    private func setTitle(position: Int) {
         title = "Item \(position + 1) of \(images.count)"
     }
 

@@ -9,7 +9,7 @@ import UIKit
 
 class BaseNetworkViewController: UIViewController {
 
-    let loadingView = LoadingView(frame: .zero)
+    private let loadingView = LoadingView(frame: .zero)
     let network = NetworkAPI()
     var items: [String] = []
     

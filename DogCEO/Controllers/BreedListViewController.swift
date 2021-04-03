@@ -9,7 +9,7 @@ import UIKit
 
 class BreedListViewController: BaseNetworkViewController, UITableViewDelegate, UITableViewDataSource {
 
-    lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let view = UITableView()
         view.delegate = self
         view.dataSource = self
@@ -51,13 +51,11 @@ class BreedListViewController: BaseNetworkViewController, UITableViewDelegate, U
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let dest = BreedImagesViewController()
-        dest.breedSelected = items[indexPath.row]
+        let dest = BreedImagesViewController(breedSelected: items[indexPath.row])
         DispatchQueue.main.async {
             self.navigationController?.pushViewController(dest, animated: true)
         }
 
     }
-
 
 }

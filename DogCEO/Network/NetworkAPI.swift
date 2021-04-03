@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkAPI {
 
-    let urlSession = URLSession.shared
+    private let urlSession = URLSession.shared
 
     func getBreedsList(
         onSuccess: @escaping ((_ response: BreedResponse) -> Void),
