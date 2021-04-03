@@ -27,6 +27,12 @@ UICollectionViewDelegateFlowLayout {
         self.breedSelected = breedSelected
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.collectionView.collectionViewLayout.invalidateLayout()
+        self.collectionView.setCollectionViewLayout(createViewLayout(), animated: true)
+    }
+
     override func setupUI() {
         super.setupUI()
         title = breedSelected.capitalized
@@ -82,13 +88,13 @@ UICollectionViewDelegateFlowLayout {
                 heightDimension: .fractionalHeight(1)
             )
         )
-
+        let count = UIDevice.current.orientation.isLandscape ? 4 : 2
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: .init(
                 widthDimension: .fractionalWidth(1),
                 heightDimension: .fractionalHeight(2/6)),
             subitem: item,
-            count: 2
+            count: count
         )
         let section = NSCollectionLayoutSection(group: group)
 
