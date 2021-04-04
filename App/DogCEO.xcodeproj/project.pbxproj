@@ -7,21 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32CE3752CA18D7E2DD9A395B /* Pods_Dog_CEO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11756AD5AC8C5D7C453995F2 /* Pods_Dog_CEO.framework */; };
 		75D804A52618B21B00DFC03F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D804A42618B21B00DFC03F /* AppDelegate.swift */; };
 		75D804AE2618B21C00DFC03F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D804AD2618B21C00DFC03F /* Assets.xcassets */; };
 		75D804B12618B21C00DFC03F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D804AF2618B21C00DFC03F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11756AD5AC8C5D7C453995F2 /* Pods_Dog_CEO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dog_CEO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D804A12618B21B00DFC03F /* Dog CEO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog CEO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D804A42618B21B00DFC03F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75D804AD2618B21C00DFC03F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75D804B02618B21C00DFC03F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75D804B22618B21C00DFC03F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BADB40173F727538845E4E55 /* Pods-Dog CEO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dog CEO.release.xcconfig"; path = "Target Support Files/Pods-Dog CEO/Pods-Dog CEO.release.xcconfig"; sourceTree = "<group>"; };
-		C72DB5751713B77566B0CEEA /* Pods-Dog CEO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dog CEO.debug.xcconfig"; path = "Target Support Files/Pods-Dog CEO/Pods-Dog CEO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,37 +25,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32CE3752CA18D7E2DD9A395B /* Pods_Dog_CEO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22E141A9C344FC9C4A347E5C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				11756AD5AC8C5D7C453995F2 /* Pods_Dog_CEO.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2F13EA34239B603D388938F5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C72DB5751713B77566B0CEEA /* Pods-Dog CEO.debug.xcconfig */,
-				BADB40173F727538845E4E55 /* Pods-Dog CEO.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		75D804982618B21B00DFC03F = {
 			isa = PBXGroup;
 			children = (
 				75D804A32618B21B00DFC03F /* DogCEO */,
 				75D804A22618B21B00DFC03F /* Products */,
-				2F13EA34239B603D388938F5 /* Pods */,
-				22E141A9C344FC9C4A347E5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,11 +65,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D804B52618B21C00DFC03F /* Build configuration list for PBXNativeTarget "Dog CEO" */;
 			buildPhases = (
-				857C5BFEDEA1FF861E8B9E86 /* [CP] Check Pods Manifest.lock */,
 				75D8049D2618B21B00DFC03F /* Sources */,
 				75D8049E2618B21B00DFC03F /* Frameworks */,
 				75D8049F2618B21B00DFC03F /* Resources */,
-				4F9D21527243775B0DFAEF20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,48 +121,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4F9D21527243775B0DFAEF20 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dog CEO/Pods-Dog CEO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dog CEO/Pods-Dog CEO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dog CEO/Pods-Dog CEO-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		857C5BFEDEA1FF861E8B9E86 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Dog CEO-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		75D8049D2618B21B00DFC03F /* Sources */ = {
@@ -331,7 +263,6 @@
 		};
 		75D804B62618B21C00DFC03F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C72DB5751713B77566B0CEEA /* Pods-Dog CEO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -350,7 +281,6 @@
 		};
 		75D804B72618B21C00DFC03F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BADB40173F727538845E4E55 /* Pods-Dog CEO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
