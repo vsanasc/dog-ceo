@@ -1,0 +1,37 @@
+PODS:
+  - DogCeoCommons (0.0.1)
+  - DogCeoCore (0.0.1):
+    - DogCeoCommons
+    - DogCeoDashboard
+    - DogCeoUIKit
+  - DogCeoDashboard (0.0.1):
+    - DogCeoCommons
+    - DogCeoUIKit
+  - DogCeoUIKit (0.0.1):
+    - DogCeoCommons
+
+DEPENDENCIES:
+  - DogCeoCommons (from `../Modules/DogCeoCommons`)
+  - DogCeoCore (from `../Modules/DogCeoCore`)
+  - DogCeoDashboard (from `../Modules/DogCeoDashboard`)
+  - DogCeoUIKit (from `../Modules/DogCeoUIKit`)
+
+EXTERNAL SOURCES:
+  DogCeoCommons:
+    :path: "../Modules/DogCeoCommons"
+  DogCeoCore:
+    :path: "../Modules/DogCeoCore"
+  DogCeoDashboard:
+    :path: "../Modules/DogCeoDashboard"
+  DogCeoUIKit:
+    :path: "../Modules/DogCeoUIKit"
+
+SPEC CHECKSUMS:
+  DogCeoCommons: 03423abd51d7a2df7082b7005e37b0a048887b5d
+  DogCeoCore: 4a0be7df1c9cf3babb44e148d5dfc520867d193b
+  DogCeoDashboard: 1d401b88c41c89c20ddf852de6dcd6167f8a6c12
+  DogCeoUIKit: 8f8a318c4aa1fdb04277995c6e83206eb75c74b9
+
+PODFILE CHECKSUM: 581d2535f381ef61b4fc49bbfa8e73a2c6db84bd
+
+COCOAPODS: 1.10.1

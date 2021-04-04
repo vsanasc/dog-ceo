@@ -1,0 +1,13 @@
+platform :ios, "13.0"
+
+target 'Dog CEO' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Dog CEO
+  pod "DogCeoCore", :path => '../Modules/DogCeoCore'
+  pod "DogCeoUIKit", :path => '../Modules/DogCeoUIKit'
+  pod "DogCeoDashboard", :path => '../Modules/DogCeoDashboard'
+  pod "DogCeoCommons", :path => '../Modules/DogCeoCommons'
+
+end
