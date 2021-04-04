@@ -9,8 +9,11 @@ import DogCeoCommons
 
 
 public class DashboardFactory: DependencyFactory {
-    required public init() { }
+    let managerAPI: ManagerRequestAPI
+    public required init(managerAPI: ManagerRequestAPI) {
+        self.managerAPI = managerAPI
+    }
     public func rootViewController() -> UIViewController {
-        BreedListViewController()
+        BreedListViewController(manager: managerAPI)
     }
 }

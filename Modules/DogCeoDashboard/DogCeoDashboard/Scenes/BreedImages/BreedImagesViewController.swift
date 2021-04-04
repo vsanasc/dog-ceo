@@ -5,6 +5,7 @@
 //  Created by Vitor on 03-04-21.
 //
 
+import DogCeoCommons
 import DogCeoUIKit
 
 class BreedImagesViewController: BaseNetworkViewController,
@@ -20,12 +21,16 @@ UICollectionViewDelegateFlowLayout {
         view.backgroundColor = .white
         return view
     }()
-    private let network = NetworkAPI()
-    private var breedSelected = ""
+    private let network: WorkerAPI
+    private let breedSelected: String
 
-    convenience init(breedSelected: String) {
-        self.init()
+    init(network: WorkerAPI, breedSelected: String) {
+        self.network = network
         self.breedSelected = breedSelected
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func viewWillLayoutSubviews() {

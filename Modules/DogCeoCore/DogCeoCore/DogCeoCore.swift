@@ -13,9 +13,16 @@ import UIKit
 public class DogCeoCore {
     
     public static func assembleCore(enviroment: Environment = .prod) -> UIViewController {
-        let dashboardFactory = DashboardFactory()
+
+        let managerRequestAPIImpl = getManagerRequestAPI()
+
+        let dashboardFactory = DashboardFactory(managerAPI: managerRequestAPIImpl)
         let rootViewController = dashboardFactory.rootViewController()
         let nav = NavigationViewController(rootViewController: rootViewController)
         return nav
+    }
+
+    static func getManagerRequestAPI() -> ManagerRequestAPI {
+        URLSessionManagerRequestAPI()
     }
 }
