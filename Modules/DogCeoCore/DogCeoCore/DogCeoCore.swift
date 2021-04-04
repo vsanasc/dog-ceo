@@ -23,6 +23,6 @@ public class DogCeoCore {
     }
 
     static func getManagerRequestAPI() -> ManagerRequestAPI {
-        URLSessionManagerRequestAPI()
+        AlamofireManagerRequestAPI()
     }
 }

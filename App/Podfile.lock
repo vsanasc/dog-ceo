@@ -1,6 +1,8 @@
 PODS:
+  - Alamofire (5.4.0)
   - DogCeoCommons (0.0.1)
   - DogCeoCore (0.0.1):
+    - Alamofire
     - DogCeoCommons
     - DogCeoDashboard
     - DogCeoUIKit
@@ -16,6 +18,10 @@ DEPENDENCIES:
   - DogCeoDashboard (from `../Modules/DogCeoDashboard`)
   - DogCeoUIKit (from `../Modules/DogCeoUIKit`)
 
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
 EXTERNAL SOURCES:
   DogCeoCommons:
     :path: "../Modules/DogCeoCommons"
@@ -27,8 +33,9 @@ EXTERNAL SOURCES:
     :path: "../Modules/DogCeoUIKit"
 
 SPEC CHECKSUMS:
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
   DogCeoCommons: 03423abd51d7a2df7082b7005e37b0a048887b5d
-  DogCeoCore: 4a0be7df1c9cf3babb44e148d5dfc520867d193b
+  DogCeoCore: 51e05cc41357187693ffcee19458527ab42dfdef
   DogCeoDashboard: 1d401b88c41c89c20ddf852de6dcd6167f8a6c12
   DogCeoUIKit: 8f8a318c4aa1fdb04277995c6e83206eb75c74b9
 

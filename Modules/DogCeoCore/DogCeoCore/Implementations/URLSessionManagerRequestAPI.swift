@@ -5,12 +5,13 @@
 //  Created by Vitor S do Nascimento on 08-11-19.
 //
 
+import DogCeoCommons
+
 public class URLSessionManagerRequestAPI: ManagerRequestAPI {
 
     private let manager = URLSession.shared
     
     public init() { }
-
 
     public func fetch<T>(
         request: ManagerRequest,
@@ -49,8 +50,6 @@ public class URLSessionManagerRequestAPI: ManagerRequestAPI {
                 } catch {
                     completion(NetworkResult.error(NetworkError.encodeError))
                 }
-
-
                 return
             } else {
                 completion(NetworkResult.error(NetworkError.httpError))

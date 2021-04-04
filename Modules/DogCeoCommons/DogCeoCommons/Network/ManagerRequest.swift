@@ -6,10 +6,10 @@
 //
 
 public struct ManagerRequest {
-    let url: String
-    var method: NetworkHTTPMethod
-    var parameters: Parameters
-    var headers: HTTPHeaders
+    public let url: String
+    public var method: NetworkHTTPMethod
+    public var parameters: Parameters
+    public var headers: HTTPHeaders
 
     public init(
         url: String,
