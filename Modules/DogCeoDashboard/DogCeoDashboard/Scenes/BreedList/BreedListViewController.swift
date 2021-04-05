@@ -13,7 +13,7 @@ UITableViewDelegate,
 UITableViewDataSource,
 BreedListPresenterOutput {
 
-    private lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let view = UITableView()
         view.delegate = self
         view.dataSource = self
@@ -21,10 +21,8 @@ BreedListPresenterOutput {
         return view
     }()
 
-    private var router: BreedListRouterProtocol?
-    private var presenter: BreedListPresenterProtocol?
-
-    var manager: ManagerRequestAPI?
+    var router: BreedListRouterProtocol?
+    var presenter: BreedListPresenterProtocol?
 
     init(manager: ManagerRequestAPI) {
         super.init(nibName: nil, bundle: nil)

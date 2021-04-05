@@ -22,9 +22,9 @@ class BreedListRouter: BreedListRouterProtocol {
         if let manager = managerAPI,
            let navigation = self.viewController?.navigationController {
             let dest = BreedImagesViewController(
-                managerAPI: manager,
-                breedSelected: breed
+                managerAPI: manager
             )
+            dest.breedSelected = breed
             DispatchQueue.main.async {
                 navigation.pushViewController(dest, animated: true)
             }
