@@ -11,9 +11,10 @@ import DogCeoUIKit
 class BreedImagesViewController: BaseNetworkViewController,
 UICollectionViewDelegate,
 UICollectionViewDataSource,
-UICollectionViewDelegateFlowLayout {
+UICollectionViewDelegateFlowLayout,
+BreedImagesPresenterOutput {
 
-    private lazy var collectionView: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: createViewLayout())
         view.delegate = self
         view.dataSource = self
@@ -21,13 +22,23 @@ UICollectionViewDelegateFlowLayout {
         view.backgroundColor = .white
         return view
     }()
-    private let network: WorkerAPI
-    private let breedSelected: String
+    var router: BreedImagesRouterProtocol?
+    var presenter: BreedImagesPresenterProtocol?
 
-    init(network: WorkerAPI, breedSelected: String) {
-        self.network = network
-        self.breedSelected = breedSelected
+    var breedSelected: String = ""
+
+    init(managerAPI: ManagerRequestAPI) {
         super.init(nibName: nil, bundle: nil)
+        let router = BreedImagesRouter()
+        let presenter = BreedImagesPresenter()
+        let worker = BreedImagesWorker(manager: managerAPI)
+
+        router.viewController = self
+        presenter.output = self
+        presenter.worker = worker
+
+        self.presenter = presenter
+        self.router = router
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -47,24 +58,24 @@ UICollectionViewDelegateFlowLayout {
     }
     override func loadData() {
         super.loadData()
-        network.getImagesList(
-            breed: breedSelected,
-            onSuccess: { [weak self] response in
-                if let self = self {
-                    self.items = response.images
-                    DispatchQueue.main.async {
-                        self.hideLoading()
-                        self.collectionView.reloadData()
-                    }
-                }
-            },
-            onError: { _ in
-                DispatchQueue.main.async {
-                    self.showErrorMessage()
-                }
-            }
-        )
+        presenter?.loadData(request: .init(breed: breedSelected))
     }
+    // MARK: - BreedImagesPresenterOutput
+    func displayData(response: BreedImagesModels.LoadData.Response) {
+        items = response.items
+        DispatchQueue.main.async {
+            self.hideLoading()
+            self.collectionView.reloadData()
+        }
+
+    }
+    func displayError(response: BreedImagesModels.ShowError.Response) {
+        DispatchQueue.main.async {
+            self.hideLoading()
+            self.showErrorMessage()
+        }
+    }
+    // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         items.count
     }
@@ -82,10 +93,7 @@ UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-
-        let dest = ImagesPreviewViewController(images: items, selected: indexPath.row)
-        navigationController?.pushViewController(dest, animated: true)
-
+        router?.routeToPreviewImages(images: items, selected: indexPath.row)
     }
     private func createViewLayout() -> UICollectionViewCompositionalLayout {
         let item = NSCollectionLayoutItem(
