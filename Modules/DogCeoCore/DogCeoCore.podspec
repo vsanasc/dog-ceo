@@ -6,6 +6,8 @@ Pod::Spec.new do |spec|
   spec.swift_version  = "5.3"
   spec.ios.deployment_target  = "13.0"
 
+  spec.dependency "Alamofire"
+
   spec.dependency "DogCeoCommons"
   spec.dependency "DogCeoUIKit"
   spec.dependency "DogCeoDashboard"

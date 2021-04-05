@@ -12,13 +12,13 @@ public enum NetworkAPIPaths {
     case list
     case images(slug: String)
 
-    func getURL() -> URL {
+    func getURL() -> String {
         let base = NetworkAPIPaths.baseURL
         switch self {
         case .list:
-            return URL(string: "\(base)breeds/list")!
+            return "\(base)breeds/list"
         case .images(let slug):
-            return URL(string: "\(base)breed/\(slug)/images")!
+            return "\(base)breed/\(slug)/images"
         }
     }
 }
