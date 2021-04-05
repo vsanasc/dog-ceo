@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (5.4.0)
+  - DogCeoCommons (0.0.1)
+  - DogCeoCore (0.0.1):
+    - Alamofire
+    - DogCeoCommons
+    - DogCeoDashboard
+    - DogCeoUIKit
+  - DogCeoDashboard (0.0.1):
+    - DogCeoCommons
+    - DogCeoUIKit
+  - DogCeoUIKit (0.0.1):
+    - DogCeoCommons
+
+DEPENDENCIES:
+  - DogCeoCommons (from `../DogCeoCommons`)
+  - DogCeoCore (from `../DogCeoCore`)
+  - DogCeoDashboard (from `./`)
+  - DogCeoUIKit (from `../DogCeoUIKit`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  DogCeoCommons:
+    :path: "../DogCeoCommons"
+  DogCeoCore:
+    :path: "../DogCeoCore"
+  DogCeoDashboard:
+    :path: "./"
+  DogCeoUIKit:
+    :path: "../DogCeoUIKit"
+
+SPEC CHECKSUMS:
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  DogCeoCommons: 03423abd51d7a2df7082b7005e37b0a048887b5d
+  DogCeoCore: 51e05cc41357187693ffcee19458527ab42dfdef
+  DogCeoDashboard: 1d401b88c41c89c20ddf852de6dcd6167f8a6c12
+  DogCeoUIKit: 8f8a318c4aa1fdb04277995c6e83206eb75c74b9
+
+PODFILE CHECKSUM: f8a6f1d92f303101ec4c234be277f110aa22a385
+
+COCOAPODS: 1.10.1

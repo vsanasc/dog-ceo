@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		755E4DA62619344D0087284F /* DogCeoCommons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755E4D9C2619344D0087284F /* DogCeoCommons.framework */; };
-		755E4DAD2619344D0087284F /* DogCeoCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 755E4D9F2619344D0087284F /* DogCeoCommons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEA9D261A51C200F45872 /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEA92261A51C200F45872 /* DependencyFactory.swift */; };
+		757DEA9E261A51C200F45872 /* ManagerRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEA96261A51C200F45872 /* ManagerRequestAPI.swift */; };
+		757DEA9F261A51C200F45872 /* NetworkHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEA98261A51C200F45872 /* NetworkHTTPMethod.swift */; };
+		757DEAA0261A51C200F45872 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEA99261A51C200F45872 /* NetworkResult.swift */; };
+		757DEAA1261A51C200F45872 /* ManagerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEA9A261A51C200F45872 /* ManagerRequest.swift */; };
+		757DEAA2261A51C200F45872 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEA9B261A51C200F45872 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,10 +28,15 @@
 
 /* Begin PBXFileReference section */
 		755E4D9C2619344D0087284F /* DogCeoCommons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DogCeoCommons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		755E4D9F2619344D0087284F /* DogCeoCommons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DogCeoCommons.h; sourceTree = "<group>"; };
 		755E4DA02619344D0087284F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755E4DA52619344D0087284F /* DogCeoCommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogCeoCommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		755E4DAC2619344D0087284F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757DEA92261A51C200F45872 /* DependencyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
+		757DEA96261A51C200F45872 /* ManagerRequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerRequestAPI.swift; sourceTree = "<group>"; };
+		757DEA98261A51C200F45872 /* NetworkHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHTTPMethod.swift; sourceTree = "<group>"; };
+		757DEA99261A51C200F45872 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		757DEA9A261A51C200F45872 /* ManagerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerRequest.swift; sourceTree = "<group>"; };
+		757DEA9B261A51C200F45872 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +79,8 @@
 		755E4D9E2619344D0087284F /* DogCeoCommons */ = {
 			isa = PBXGroup;
 			children = (
-				755E4D9F2619344D0087284F /* DogCeoCommons.h */,
+				757DEA91261A51C200F45872 /* Dependencies */,
+				757DEA93261A51C200F45872 /* Network */,
 				755E4DA02619344D0087284F /* Info.plist */,
 			);
 			path = DogCeoCommons;
@@ -83,6 +94,26 @@
 			path = DogCeoCommonsTests;
 			sourceTree = "<group>";
 		};
+		757DEA91261A51C200F45872 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				757DEA92261A51C200F45872 /* DependencyFactory.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		757DEA93261A51C200F45872 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				757DEA96261A51C200F45872 /* ManagerRequestAPI.swift */,
+				757DEA98261A51C200F45872 /* NetworkHTTPMethod.swift */,
+				757DEA99261A51C200F45872 /* NetworkResult.swift */,
+				757DEA9A261A51C200F45872 /* ManagerRequest.swift */,
+				757DEA9B261A51C200F45872 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -90,7 +121,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				755E4DAD2619344D0087284F /* DogCeoCommons.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757DEA9E261A51C200F45872 /* ManagerRequestAPI.swift in Sources */,
+				757DEA9D261A51C200F45872 /* DependencyFactory.swift in Sources */,
+				757DEA9F261A51C200F45872 /* NetworkHTTPMethod.swift in Sources */,
+				757DEAA2261A51C200F45872 /* NetworkError.swift in Sources */,
+				757DEAA1261A51C200F45872 /* ManagerRequest.swift in Sources */,
+				757DEAA0261A51C200F45872 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +419,7 @@
 		755E4DB42619344D0087284F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DogCeoCommonsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -400,6 +437,7 @@
 		755E4DB52619344D0087284F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DogCeoCommonsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

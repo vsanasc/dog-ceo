@@ -1,0 +1,16 @@
+use_frameworks!
+
+target 'Example' do
+  pod "DogCeoDashboard", :path => "./"
+  pod "DogCeoCommons", :path => "../DogCeoCommons"
+  pod "DogCeoUIKit", :path => "../DogCeoUIKit"
+  pod "DogCeoCore", :path => "../DogCeoCore"
+end
+
+target 'ExampleTests' do
+
+  pod "DogCeoDashboard", :path => "./"
+  pod "DogCeoCommons", :path => "../DogCeoCommons"
+  pod "DogCeoUIKit", :path => "../DogCeoUIKit"
+  
+end

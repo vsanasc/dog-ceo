@@ -7,7 +7,6 @@
 
 import DogCeoCommons
 
-
 public class DashboardFactory: DependencyFactory {
     let managerAPI: ManagerRequestAPI
     public required init(managerAPI: ManagerRequestAPI) {
